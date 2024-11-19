@@ -1,0 +1,11 @@
+[Unit]
+Description=Upload data to Google Drive every hour
+
+[Service]
+Type=simple
+User=pi
+ExecStart=/bin/bash /home/pi/PepperHouse/shell/upload_data.sh
+EnvironmentFile=/etc/sysconfig/device
+
+[Install]
+WantedBy=multi-user.target

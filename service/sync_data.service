@@ -1,0 +1,11 @@
+[Unit]
+Description=Synchronize acquired data with Google Drive
+
+[Service]
+Type=simple
+User=pi
+ExecStart=/bin/bash /home/pi/PepperHouse/shell/sync_data.sh
+EnvironmentFile=/etc/sysconfig/device
+
+[Install]
+WantedBy=multi-user.target

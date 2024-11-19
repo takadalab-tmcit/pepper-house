@@ -1,0 +1,10 @@
+[Unit]
+Description=Acquire sensors data
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /home/pi/PepperHouse/shell/get_data.sh
+EnvironmentFile=/etc/sysconfig/device
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,10 @@
+[Unit]
+Description=Synchronize acquired data with Google Drive
+
+[Timer]
+Unit=sync_data.service
+OnCalendar=*-*-* 0:30:00
+AccuracySec=1m
+
+[Install]
+WantedBy=timers.target

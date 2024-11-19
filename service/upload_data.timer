@@ -1,0 +1,10 @@
+[Unit]
+Description=Upload data to Google Drive every hour
+
+[Timer]
+Unit=upload_data.service
+OnCalendar=*-*-* *:00:00
+AccuracySec=1m
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,9 @@
+[Unit]
+Description=Reboot once a week
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/systemctl --force reboot
+
+[Install]
+WantedBy=multi-user.target

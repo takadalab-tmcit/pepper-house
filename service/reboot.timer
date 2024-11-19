@@ -1,0 +1,9 @@
+[Unit]
+Description=Reboot once a week
+
+[Timer]
+OnCalendar=Mon *-*-* 00:00:00
+AccuracySec=1m
+
+[Install]
+WantedBy=timers.target
